@@ -1,0 +1,7 @@
+<template>
+	<require from="./label.scss"></require>
+
+	<label class="ms-Label ${ disabled ? 'is-disabled' : '' } ${ required ? 'is-required' : '' }">
+		<slot></slot>
+	</label>
+</template>

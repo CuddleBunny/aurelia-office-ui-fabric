@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["../src", "../demo"],
+  "compilerOptions": {
+    "baseUrl": "../",
+    "paths": {
+      "*": ["*"],
+      "@aurelia-office-ui-fabric/*": ["../src/*"]
+    }
+  }
+}

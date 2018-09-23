@@ -1,0 +1,22 @@
+@import "../../styles/common";
+
+.ms-Label {
+	//color: theme.semanticColors.bodyText;
+	box-sizing: border-box;
+	box-shadow: none;
+	margin: 0;
+	display: block;
+	padding: 5px 0;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+
+	&.is-disabled {
+		//color: theme.semanticColors.disabledBodyText;
+	}
+
+	&.is-required:after {
+		content: ' *';
+        //color: theme.semanticColors.errorText;
+		padding-right: 12;
+	}
+}

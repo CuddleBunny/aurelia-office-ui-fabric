@@ -1,0 +1,101 @@
+@import "../../styles/common";
+
+.ms-Toggle {
+	//font-size: theme.fonts.medium;
+	margin-bottom: 8px;
+
+	.container {
+		display: inline-flex;
+		position: relative;
+	}
+
+	.pill {
+		font-size: 20px;
+		box-sizing: border-box;
+		width: 2.2em;
+		height: 1em;
+		border-radius: 1em;
+		transition: all 0.1s ease;
+		border-width: 1px;
+		border-style: solid;
+		//background: semanticColors.bodyBackground;
+		//border-color: semanticColors.smallInputBorder;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		padding: 0 0.2em;
+	}
+
+	.thumb {
+		width: 0.5em;
+		height: 0.5em;
+		border-radius: 0.5em;
+		transition: all 0.1s ease;
+		//background-color: semanticColors.inputBorderHovered;
+		border-color: transparent;
+		border-width: 0.28em;
+		border-style: solid;
+		box-sizing: border-box;
+	}
+
+	.text .ms-Label {
+		padding: 0;
+		margin: 0 10px;
+		user-select: none;
+	}
+
+	&.is-disabled {
+		.ms-Toggle-label {
+			//color: semanticColors.disabledText;
+		}
+
+		.pill {
+			cursor: default;
+			//border-color: semanticColors.disabledBodyText;
+		}
+
+		.thumb {
+			//background-color: semanticColors.disabledBodyText;
+		}
+
+		.text .ms-Label {
+			//color:semanticColors.disabledText;
+		}
+	}
+
+	&.is-checked {
+		.pill {
+			//background: semanticColors.inputBackgroundChecked;
+			border-color: transparent;
+			justify-content: flex-end;
+
+			&:hover {
+				//background-color: semanticColors.inputBackgroundCheckedHovered;
+				border-color: transparent;
+			}
+		}
+
+		.thumb {
+			//background-color:semanticColors.inputForegroundChecked;
+		}
+	}
+
+	&.is-disabled.is-checked {
+		.pill {
+			//background-color: semanticColors.disabledBodyText;
+			border-color: transparent;
+		}
+
+		.thumb {
+			//background-color: semanticColors.disabledBackground;
+		}
+	}
+
+	&:not(.is-disabled):not(.is-checked) {
+		.pill {
+			&:hover {
+				//border-color: semanticColors.inputBorderHovered;
+			}
+		}
+	}
+}

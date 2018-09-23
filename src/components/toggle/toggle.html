@@ -1,0 +1,15 @@
+<template>
+	<require from="./toggle.scss"></require>
+
+	<div class="ms-Toggle ${ disabled ? 'is-disabled' : 'is-enabled' } ${ checked ? 'is-checked' : '' }">
+		<uif-label class="ms-Toggle-label" if.bind="label">${label}</uif-label>
+
+		<div class="ms-Toggle-innerContainer container">
+			<button class="ms-Toggle-background pill" click.delegate="toggle()">
+				<div class="ms-Toggle-thumb thumb"></div>
+			</button>
+
+			<uif-label if.bind="onText || offText" class="ms-Toggle-stateText text">${ checked ? onText : offText }</uif-label>
+		</div>
+	</div>
+</template>
