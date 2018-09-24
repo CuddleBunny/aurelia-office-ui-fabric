@@ -1,7 +1,8 @@
 @import "../../styles/common";
 
 .ms-Toggle {
-	//font-size: theme.fonts.medium;
+	@include ms-font-m;
+
 	margin-bottom: 8px;
 
 	.container {
