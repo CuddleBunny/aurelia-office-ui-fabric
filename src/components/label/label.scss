@@ -1,7 +1,7 @@
 @import "../../styles/common";
 
 .ms-Label {
-	//color: theme.semanticColors.bodyText;
+	color: var(--ux-design--body-text-color);
 	box-sizing: border-box;
 	box-shadow: none;
 	margin: 0;
@@ -11,12 +11,12 @@
 	overflow-wrap: break-word;
 
 	&.is-disabled {
-		//color: theme.semanticColors.disabledBodyText;
+		color: var(--ux-design--disabled-body-text-color);
 	}
 
 	&.is-required:after {
 		content: ' *';
-        //color: theme.semanticColors.errorText;
+        color: var(--ux-design--error-text-color);
 		padding-right: 12;
 	}
 }

@@ -18,12 +18,16 @@
 		transition: all 0.1s ease;
 		border-width: 1px;
 		border-style: solid;
-		//background: semanticColors.bodyBackground;
-		//border-color: semanticColors.smallInputBorder;
+		background-color: var(--ux-theme--toggle-pill-unchecked-background-color, var(--ux-design--body-background-color));
+		border-color: var(--ux-theme--toggle-pill-border-color, var(--ux-design--small-input-border-color));
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		padding: 0 0.2em;
+
+		&:hover {
+			border-color: var(--ux-theme--toggle-pill-border-hovered-color, var(--ux-design--input-border-hovered-color));
+		}
 	}
 
 	.thumb {
@@ -31,7 +35,7 @@
 		height: 0.5em;
 		border-radius: 0.5em;
 		transition: all 0.1s ease;
-		//background-color: semanticColors.inputBorderHovered;
+		background-color: var(--ux-theme--toggle-thumb-background-color, var(--ux-design--input-border-hovered-color));
 		border-color: transparent;
 		border-width: 0.28em;
 		border-style: solid;
@@ -46,55 +50,55 @@
 
 	&.is-disabled {
 		.ms-Toggle-label {
-			//color: semanticColors.disabledText;
+			color: var(--ux-design--disabled-text-color);
 		}
 
 		.pill {
 			cursor: default;
-			//border-color: semanticColors.disabledBodyText;
+			border-color: var(--ux-theme--toggle-pill-border-disabled-color, var(--ux-design--disabled-body-text-color));
 		}
 
 		.thumb {
-			//background-color: semanticColors.disabledBodyText;
+			background-color: var(--ux-theme--toggle-thumb-disabled-background-color, var(--ux-design--disabled-body-text-color));
 		}
 
 		.text .ms-Label {
-			//color:semanticColors.disabledText;
+			color: var(--ux-theme--text-disabled-color, var(--ux-design--disabled-text-color));
 		}
 	}
 
 	&.is-checked {
 		.pill {
-			//background: semanticColors.inputBackgroundChecked;
+			background-color: var(--ux-theme--toggle-pill-checked-background-color, var(--ux-design--input-background-checked-color));
 			border-color: transparent;
 			justify-content: flex-end;
 
 			&:hover {
-				//background-color: semanticColors.inputBackgroundCheckedHovered;
+				background-color: var(--ux-theme--toggle-pill-checked-hovered-background-color, var(--ux-design--input-background-checked-hovered-color));
 				border-color: transparent;
 			}
 		}
 
 		.thumb {
-			//background-color:semanticColors.inputForegroundChecked;
+			background-color: var(--ux-theme--toggle-thumb-checked-background-color, var(--ux-design--input-foreground-checked-color));
 		}
 	}
 
 	&.is-disabled.is-checked {
 		.pill {
-			//background-color: semanticColors.disabledBodyText;
+			background-color: var(--ux-theme--toggle-pill-checked-disabled-background-color, var(--ux-design--disabled-body-text-color));
 			border-color: transparent;
 		}
 
 		.thumb {
-			//background-color: semanticColors.disabledBackground;
+			background-color: var(--ux-theme--toggle-thumb-checked-disabled-background-color, var(--ux-design--disabled-background-color));
 		}
 	}
 
 	&:not(.is-disabled):not(.is-checked) {
 		.pill {
 			&:hover {
-				//border-color: semanticColors.inputBorderHovered;
+				border-color: var(--ux-design--input-border-hovered-color);
 			}
 		}
 	}
