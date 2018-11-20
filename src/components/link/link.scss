@@ -1,0 +1,54 @@
+@import "../../styles/common";
+
+.ms-Link {
+	@include ms-font-m;
+
+	color: var(--ux-design--link-color);
+	outline: none;
+
+	&:hover {
+		color: var(--ux-design--link-hovered-color);
+	}
+
+	&.is-disabled {
+		color: var(--ux-design--disabled-text-color);
+		cursor: default;
+		pointer-events: none;
+	}
+
+	&.is-enabled {
+		&:active, &:hover, &:active:hover {
+			color: var(--ux-design--link-hovered-color);
+		}
+
+		&:focus {
+			color: var(--ux-design--link-hovered-color);
+		}
+	}
+}
+
+a.ms-Link {
+	text-decoration: none;
+}
+
+button.ms-Link {
+	background: none;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	display: inline;
+	font-size: inherit;
+	margin: 0;
+	overflow: inherit;
+	padding: 0;
+	text-align: left;
+	text-overflow: inherit;
+	user-select: text;
+	border-bottom: 1px solid transparent; // For Firefox high contrast mode.
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	button.ms-Link {
+		border-bottom: none; // For IE high contrast mode.
+	}
+}

@@ -1,3 +1,4 @@
+import { UIFLink } from './components/link/link';
 import { FrameworkConfiguration } from 'aurelia-framework';
 import { UIFLabel } from './components/label/label';
 import { UIFToggle } from './components/toggle/toggle';
@@ -7,6 +8,7 @@ import { UIFDesign } from './core/uif-design';
 export function configure(config: FrameworkConfiguration): void {
 	config.globalResources([
 		UIFLabel,
+		UIFLink,
 		UIFToggle
 	]);
 

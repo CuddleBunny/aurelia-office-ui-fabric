@@ -1,0 +1,6 @@
+<template>
+	<require from="./link.scss"></require>
+
+	<a class="ms-Link ${ disabled ? 'is-disabled' : 'is-enabled' }" if.one-time="href" href.bind="href"><template replaceable part="content"></template></a>
+	<button class="ms-Link ${ disabled ? 'is-disabled' : 'is-enabled' }" else><template replaceable part="content"></template></button>
+</template>
