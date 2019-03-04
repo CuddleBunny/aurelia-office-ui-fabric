@@ -1,25 +1,18 @@
-import { UIFToggleTheme } from './toggle-theme';
+import { UIFTextFieldTheme } from './text-field-theme';
 import { BaseComponent } from '../base-component';
 import { customElement, bindable, inject } from 'aurelia-framework';
 import { StyleEngine } from '@aurelia-ux/core';
 
 @customElement('uif-toggle')
-@inject(Element, StyleEngine, UIFToggleTheme)
+@inject(Element, StyleEngine, UIFTextFieldTheme)
 export class UIFToggle implements BaseComponent {
-	@bindable public theme: UIFToggleTheme;
+	@bindable public theme: UIFTextFieldTheme;
 
 	@bindable protected disabled: boolean = false;
-	@bindable protected checked: boolean = false;
-	@bindable protected onText: string = '';
-	@bindable protected offText: string = '';
 	@bindable protected label: string | undefined;
 
-	constructor(public element: HTMLElement, private styleEngine: StyleEngine, theme: UIFToggleTheme) {
+	constructor(public element: HTMLElement, private styleEngine: StyleEngine, theme: UIFTextFieldTheme) {
 		this.theme = theme;
-	}
-
-	protected toggle(): void {
-		this.checked = !this.checked;
 	}
 
 	// TODO: Share between components?
