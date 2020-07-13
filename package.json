@@ -93,7 +93,7 @@
 		"rollup-plugin-typescript2": "^0.13.0",
 		"rollup-plugin-uglify": "^3.0.0",
 		"sass-loader": "^7.0.1",
-		"standard-version": "^4.3.0",
+		"standard-version": "^8.0.1",
 		"style-loader": "^0.21.0",
 		"text-loader": "^0.0.1",
 		"ts-loader": "^4.3.0",
